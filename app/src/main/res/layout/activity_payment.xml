@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome"
+    tools:context=".PaymentActivity">
+
+    <ImageView
+        android:id="@+id/dee"
+        android:layout_width="220dp"
+        android:layout_height="330dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+
+        android:src="@drawable/delivery"
+        />
+
+    <TextView
+        android:id="@+id/r7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dee"
+        android:layout_marginTop="50dp"
+        android:padding="5dp"
+        android:text="Your delivery will be shipped.
+        Kindly make the payment to the delivery guy"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/r6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/r7"
+        android:layout_marginTop="35dp"
+        android:text="amount"
+        android:textStyle="bold"
+       android:padding="5dp"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homebutton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        android:text="HOME"
+        />
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminCategory">
+
+    <TextView
+        android:id="@+id/slogan_cetegory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="Add New Product"
+        android:textAlignment="center"
+        android:textSize="26dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linear_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slogan_cetegory"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/books"
+            android:layout_width="91dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="1dp"
+            android:src="@drawable/books"/>
+
+
+        <ImageView
+            android:id="@+id/hole"
+            android:layout_width="91dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/hole"/>
+
+
+        <ImageView
+            android:id="@+id/glue"
+            android:layout_width="91dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/glue"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_category_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_category_layout"
+        android:layout_marginTop="-10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/stapler"
+            android:layout_width="91dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/stapler"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/spiral"
+            android:layout_width="91dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/spiral"/>
+
+
+        <ImageView
+            android:id="@+id/stat"
+            android:layout_width="91dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/stat"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_category_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_category_layout1"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/brush"
+            android:layout_width="91dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="1dp"
+            android:src="@drawable/brush"/>
+
+
+        <ImageView
+            android:id="@+id/drafter"
+            android:layout_width="91dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/drafting"/>
+
+
+        <ImageView
+            android:id="@+id/magazine"
+            android:layout_width="91dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/magazine"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/check_new_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_above="@+id/admin_logout"
+        android:text="Check new orders"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/admin_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="LOGOUT"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        />
+
+</RelativeLayout>
