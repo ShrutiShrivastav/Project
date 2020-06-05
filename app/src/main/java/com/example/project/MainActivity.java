@@ -2,8 +2,8 @@ package com.example.project;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.annotation.NonNull;
+//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -21,9 +21,12 @@ import com.google.firebase.database.ValueEventListener;
 
 import io.paperdb.Paper;
 
+import androidx.annotation.NonNull; //new
+import androidx.appcompat.app.AppCompatActivity; //new
+
 public class MainActivity extends AppCompatActivity
 {
-    private Button joinNowButton, loginButton;
+    private Button joinNowButton, loginButton, login1, signup;
     private ProgressDialog loadingBar;
 
 
@@ -31,8 +34,9 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button login1 = (Button) findViewById(R.id.main_login_btn);
-        Button signup = (Button) findViewById(R.id.main_Signup);
+         login1 = (Button) findViewById(R.id.main_login_btn);
+         signup = (Button) findViewById(R.id.main_Signup);
+          // logout= (Button)findViewById(R.id.btnLogout);
         loadingBar=new ProgressDialog(this);
         Paper.init(this);
 

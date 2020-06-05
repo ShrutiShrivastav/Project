@@ -3,9 +3,8 @@ package com.example.project;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+//import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -22,9 +21,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rey.material.widget.CheckBox;
 
-import java.util.regex.Pattern;
-
 import io.paperdb.Paper;
+
+import androidx.annotation.NonNull;  //new
+import androidx.appcompat.app.AppCompatActivity;  //new
+
+//import android.support.annotation.NonNull;
 
 public class loginactivity extends AppCompatActivity
 {

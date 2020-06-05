@@ -1,12 +1,17 @@
 package com.example.project.ViewHolder;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+//import android.support.annotation.NonNull;
+//import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.bookmart1.Interface.ItemClickListener;
-import com.example.bookmart1.R;
+import com.example.project.Interface.ItemClickListener;
+import com.example.project.R;
+
+import androidx.recyclerview.widget.RecyclerView; //new
+import androidx.annotation.NonNull; //new
+
+
 
 public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
