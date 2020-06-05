@@ -98,7 +98,8 @@ tools:context=".loginactivity">
         android:text="Login"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true" />
 
 
 <TextView
@@ -112,7 +113,8 @@ tools:context=".loginactivity">
     android:layout_alignParentEnd="true"
     android:textSize="17sp"
     android:layout_marginTop="5dp"
-    android:layout_marginRight="20dp" />
+    android:layout_marginRight="20dp"
+    android:layout_alignParentRight="true" />
 
 <TextView
     android:id="@+id/not_admin_link"
@@ -125,7 +127,8 @@ tools:context=".loginactivity">
     android:textColor="@color/colorPrimary"
     android:layout_alignParentStart="true"
     android:textSize="17sp"
-    android:layout_marginRight="20dp" />
+    android:layout_marginRight="20dp"
+    android:layout_alignParentLeft="true" />
 
 
 </RelativeLayout>
