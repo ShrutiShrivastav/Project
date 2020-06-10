@@ -30,8 +30,12 @@
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
+
+
         <activity android:name=".AdminCategory" />
-        <activity android:name=".registeractivity" />
+        <activity android:name=".registeractivity" >
+
+    </activity>
         <activity android:name=".loginactivity" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

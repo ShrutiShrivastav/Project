@@ -92,7 +92,7 @@ public class ProductdetailsActivity extends AppCompatActivity {
         savecurrenttime= currentDate.format(CalForData.getTime());
 
 
-        final  DatabaseReference cartListRef=FirebaseDatabase.getInstance().getReference().child("Cart List");
+        final  DatabaseReference cartListRef=FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Cart List");
         final HashMap<String,Object> cartMap = new HashMap<>();
         cartMap.put("pid",productID);
         cartMap.put("pname",productname.getText().toString());
@@ -129,7 +129,7 @@ public class ProductdetailsActivity extends AppCompatActivity {
 
     private void getproductdetails(String productID)
     {
-        DatabaseReference productsRef = FirebaseDatabase.getInstance().getReference().child("Products");
+        DatabaseReference productsRef = FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Products");
 
         productsRef.child(productID).addValueEventListener(new ValueEventListener() {
             @Override
@@ -159,7 +159,7 @@ public class ProductdetailsActivity extends AppCompatActivity {
     private void CheckorderState()
     {
         DatabaseReference ordersRef;
-        ordersRef= FirebaseDatabase.getInstance().getReference().child("Orders").child(Prevalent.CurrentOnlineUser.getPhone());
+        ordersRef= FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Orders").child(Prevalent.CurrentOnlineUser.getPhone());
 
         ordersRef.addValueEventListener(new ValueEventListener() {
             @Override

@@ -55,7 +55,7 @@ public class SettingActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-        storageProfilePrictureRef = FirebaseStorage.getInstance().getReference().child("Profile pictures");
+        storageProfilePrictureRef = FirebaseStorage.getInstance("gs://bookmart-b2ad7.appspot.com").getReference().child("Profile pictures");
 
         profileImageView = (CircleImageView) findViewById(R.id.settings_profile_image);
         fullNameEditText = (EditText) findViewById(R.id.settings_full_name);
@@ -111,7 +111,7 @@ public class SettingActivity extends AppCompatActivity
 
     private void updateOnlyUserInfo()
     {
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
+        DatabaseReference ref = FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Users");
 
         HashMap<String, Object> userMap = new HashMap<>();
         userMap. put("name", fullNameEditText.getText().toString());
@@ -207,7 +207,7 @@ public class SettingActivity extends AppCompatActivity
                                 Uri downloadUrl = task.getResult();
                                 myUrl = downloadUrl.toString();
 
-                                DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
+                                DatabaseReference ref = FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Users");
 
                                 HashMap<String, Object> userMap = new HashMap<>();
                                 userMap. put("name", fullNameEditText.getText().toString());
@@ -239,7 +239,7 @@ public class SettingActivity extends AppCompatActivity
 
     private void userInfoDisplay(final CircleImageView profileImageView, final EditText fullNameEditText, final EditText userPhoneEditText, final EditText addressEditText)
     {
-        DatabaseReference UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child(Prevalent.CurrentOnlineUser.getPhone());
+        DatabaseReference UsersRef = FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Users").child(Prevalent.CurrentOnlineUser.getPhone());
 
         UsersRef.addValueEventListener(new ValueEventListener() {
             @Override

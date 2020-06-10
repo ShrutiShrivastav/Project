@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity
     private void AllowAccess(final String phone, final String password)
     {
         final DatabaseReference RootRef;
-        RootRef = FirebaseDatabase.getInstance().getReference();
+        RootRef = FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference();
 
 
         RootRef.addListenerForSingleValueEvent(new ValueEventListener() {

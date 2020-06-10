@@ -42,7 +42,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_confirm_final_order);
 
         Totalamount=getIntent().getStringExtra("Total Price");
-        Toast.makeText(this,"total price =$" + Totalamount,Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"total price =Rs" + Totalamount,Toast.LENGTH_SHORT).show();
 
         final TextView t=(TextView)findViewById(R.id.txt);
         nameedittext=(EditText)findViewById(R.id.shipment_name);
@@ -115,7 +115,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         SimpleDateFormat currentTime= new SimpleDateFormat("HH:MM:ss a");
         savecurrenttime= currentTime.format(CalForData.getTime());
 
-        final DatabaseReference ordersRef= FirebaseDatabase.getInstance().getReference()
+        final DatabaseReference ordersRef= FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference()
                 .child("Orders")
                 .child(Prevalent.CurrentOnlineUser.getPhone());
 
@@ -136,7 +136,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
             {
                 if(task.isSuccessful())
                 {
-                    FirebaseDatabase.getInstance().getReference()
+                    FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference()
                             .child("Cart List")
                             .child("User view")
                             .child(Prevalent.CurrentOnlineUser.getPhone())

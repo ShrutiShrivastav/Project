@@ -38,7 +38,7 @@ public class AdminNewProductActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_new_product);
 
-        ordersRef= FirebaseDatabase.getInstance().getReference().child("Orders");
+        ordersRef= FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Orders");
 
         ordersList=findViewById(R.id.orders_list);
         ordersList.setLayoutManager(new LinearLayoutManager(this));

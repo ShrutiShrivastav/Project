@@ -8,21 +8,14 @@ android:background="@drawable/welcome"
 tools:context=".loginactivity">
 
 
-    <ImageView
-        android:id="@+id/app_logo"
-        android:layout_width="500dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/white" />
-
     <EditText
         android:id="@+id/login_edit"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_below="@+id/app_logo"
+        android:layout_below="@+id/imageView"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="124dp"
         android:layout_marginRight="20dp"
+        android:layout_marginTop="107dp"
         android:background="@drawable/input_design"
         android:drawableLeft="@drawable/phone"
         android:hint="    Phone Number"
@@ -84,51 +77,73 @@ tools:context=".loginactivity">
         android:id="@+id/llogin_bttn"
         android:layout_width="350dp"
         android:layout_height="45dp"
-        android:layout_below="@+id/forgot_pass"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
 
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="7dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/forgot_pass"
+        android:layout_marginBottom="99dp"
         android:layout_marginEnd="14dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginRight="14dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="7dp"
         android:background="@drawable/buttons"
         android:text="Login"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        android:layout_alignParentLeft="true" />
+        android:textSize="18sp" />
 
 
-<TextView
-    android:id="@+id/admin_link"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="80dp"
-    android:text="I'm an Admin?"
-    android:layout_below="@id/llogin_bttn"
-    android:textColor="@color/colorPrimary"
-    android:layout_alignParentEnd="true"
-    android:textSize="17sp"
-    android:layout_marginTop="5dp"
-    android:layout_marginRight="20dp"
-    android:layout_alignParentRight="true" />
+    <TextView
+        android:id="@+id/admin_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/llogin_bttn"
+        android:layout_marginBottom="92dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="I'm an Admin?"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp" />
 
-<TextView
-    android:id="@+id/not_admin_link"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="20dp"
-    android:layout_marginTop="5dp"
-    android:text="I'm not an Admin?"
-    android:layout_below="@id/llogin_bttn"
-    android:textColor="@color/colorPrimary"
-    android:layout_alignParentStart="true"
-    android:textSize="17sp"
-    android:layout_marginRight="20dp"
-    android:layout_alignParentLeft="true" />
+    <TextView
+        android:id="@+id/not_admin_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/llogin_bttn"
+        android:layout_marginBottom="92dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="I'm not an Admin?"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        android:layout_height="288dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="117dp"
+        android:layout_marginLeft="113dp"
+        android:layout_marginRight="117dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="36dp"
+        app:srcCompat="@drawable/brush" />
 
 
 </RelativeLayout>

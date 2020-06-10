@@ -20,6 +20,8 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
+import  com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -50,6 +52,7 @@ public class HomeActivity extends AppCompatActivity
 
     private DatabaseReference ProductsRef;
     private RecyclerView recyclerView;
+
     RecyclerView.LayoutManager layoutManager;
 
 
@@ -58,7 +61,9 @@ public class HomeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ProductsRef= FirebaseDatabase.getInstance().getReference().child("Products");
+        ProductsRef= FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Products");
+        // Get a secondary database instance by URL
+       // DatabaseReference secondary = FirebaseDatabase.getInstance("https://testapp-1234.firebaseio.com").getReference();
 
         Paper.init(this);
 
@@ -87,11 +92,11 @@ public class HomeActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         View headerView= navigationView.getHeaderView(0);
-        TextView userNameTextView=headerView.findViewById(R.id.user_profile_name);
-        CircleImageView profileImageView= headerView.findViewById(R.id.profile_image);
+       // TextView userNameTextView=headerView.findViewById(R.id.user_profile_name);
+       //CircleImageView profileImageView= headerView.findViewById(R.id.profile_image);
 
-        userNameTextView.setText(Prevalent.CurrentOnlineUser.getName());
-        Picasso.get().load(Prevalent.CurrentOnlineUser.getImage()).placeholder(R.drawable.profile).into(profileImageView);
+        //userNameTextView.setText(Prevalent.CurrentOnlineUser.getName());
+      // Picasso.get().load(Prevalent.CurrentOnlineUser.getImage()).placeholder(R.drawable.profile).into(profileImageView);
 
 
 
@@ -203,6 +208,7 @@ public class HomeActivity extends AppCompatActivity
         }
         else if (id == R.id.logout) {
             Paper.book().destroy();
+            FirebaseAuth.getInstance().signOut();
 
             Intent intent= new Intent(HomeActivity.this, MainActivity.class);
             //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);

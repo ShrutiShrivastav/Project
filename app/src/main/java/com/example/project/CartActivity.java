@@ -68,7 +68,7 @@ public class CartActivity extends AppCompatActivity {
             public void onClick(View view)
 
             {
-                txtTotalAmount.setText("Total price =$" + String.valueOf(overTotalPrice));
+                txtTotalAmount.setText("Total price =Rs" + String.valueOf(overTotalPrice));
 
 
 
@@ -90,7 +90,7 @@ public class CartActivity extends AppCompatActivity {
         super.onStart();
         CheckorderState();
 
-        final DatabaseReference cartListRef= FirebaseDatabase.getInstance().getReference().child("Cart List");
+        final DatabaseReference cartListRef= FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Cart List");
 
         FirebaseRecyclerOptions<Cart> options=new FirebaseRecyclerOptions.Builder<Cart>().setQuery(cartListRef.child("User View").child(Prevalent.CurrentOnlineUser.getPhone()).child("Products"),Cart.class).build();
 
@@ -132,7 +132,7 @@ public class CartActivity extends AppCompatActivity {
                                 }
                                 if(i==1){
                                     cartListRef.child("User View")
-                                            .child(Prevalent.CurrentOnlineUser.getPhone())
+                                           // .child(Prevalent.CurrentOnlineUser.getPhone())
                                             .child("Products")
                                             .child(model.getPid())
                                             .removeValue()
@@ -180,7 +180,7 @@ public class CartActivity extends AppCompatActivity {
     private void CheckorderState()
     {
         DatabaseReference ordersRef;
-        ordersRef= FirebaseDatabase.getInstance().getReference().child("Orders").child(Prevalent.CurrentOnlineUser.getPhone());
+        ordersRef= FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Orders").child(Prevalent.CurrentOnlineUser.getPhone());
 
         ordersRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -193,7 +193,7 @@ public class CartActivity extends AppCompatActivity {
 
                     if(shippingstate.equals("shipped"))
                     {
-                        txtTotalAmount.setText("Dear" +Username+ "\nOrder is shipped successfully");
+                        txtTotalAmount.setText("Dear +Username+ \nOrder is shipped successfully");
                         recyclerView.setVisibility(View.GONE);
                         txtmsg1.setVisibility(View.VISIBLE);
 

@@ -52,8 +52,8 @@ public class AdminActivity extends AppCompatActivity
 
 
         //CategoryName = getIntent().getExtras().getParcelable("category").toString();
-        ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");
-        ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
+        ProductImagesRef = FirebaseStorage.getInstance("gs://bookmart-b2ad7.appspot.com").getReference().child("Product Images");
+        ProductsRef = FirebaseDatabase.getInstance("https://bookmart-b2ad7.firebaseio.com/").getReference().child("Products");
 
 
         AddNewProductButton = (Button) findViewById(R.id.add_new_product);
